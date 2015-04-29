@@ -53,7 +53,7 @@ if (![string]::IsNullOrEmpty($NamedInstance)) {
     $DatabaseInstance = "$DatabaseServer\$NamedInstance"
 } 
 else {
-    $DatabaseInstance = $Database
+    $DatabaseInstance = $DatabaseServer
 }
 
 (Get-Content $SonarProperties) | Foreach-Object {
